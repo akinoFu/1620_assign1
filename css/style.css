@@ -117,3 +117,20 @@ button {
     width: 32px;
     height: 32px;
 }
+@media screen and (max-width:800px){
+    h1 {
+        font-size: 30px;
+    }
+    .wrapper {
+        grid-template-columns: 45px auto;
+        grid-template-rows: 50px auto 55px;
+    }
+    .sidebar {
+        padding: 3px;
+    }
+    ul {
+        list-style-position: inside;
+        list-style-type: '_____ ';
+        padding-left: 3px;
+    }
+}
