@@ -10,13 +10,14 @@ FONT
 }
 body {
     font-family: 'Commissioner', sans-serif;
+    font-size: 0.7rem;
 }
 .wrapper {
     background-color: #fff;
     display: grid;
     min-height: 100vh;
     grid-template-columns: 200px auto;
-    grid-template-rows: 80px auto 80px;
+    grid-template-rows: 70px auto 70px;
     grid-gap: 5px;
 }
 .header {
@@ -43,28 +44,25 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 85% auto;
-    grid-template-rows: 30px 85% auto;
-    /* grid-gap: 5px; */
+    grid-template-rows: 7.5% 85% 7.5%;
     /* padding: 10px; <- the gap between row 2 and 3 is invisible when it is enable*/ 
 }
 .note_menu {
     grid-column: span 2;
-    display: grid;
-    grid-template-columns: 75px auto;
-    grid-gap: 10px;
-    padding: 5px 0px 5px 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 10px;
 }
 .note_text {
     margin: 10px;
 }
 .note_save {
     grid-column-start: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-.save {
-    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 10px;
+    min-height: 20px;
 }
 
 textarea {
@@ -79,13 +77,15 @@ textarea {
 }
 button {
     box-sizing: border-box;
-    border-radius: 7px;
-    line-height: 25px;
-    font-size: 13px;
+    min-width: 60px;
+    border-radius: 5px;
+    font-size: 0.7rem;
     text-decoration: none;
     padding: 2px 8px;
     box-shadow: none;
     color: #fff;
+    margin: 0 5px 0 0;
+    white-space: nowrap;
 }
 .btn_new, .btn_save {
     background-color: #5d987c;
@@ -104,13 +104,13 @@ button {
     justify-content: center;
 }
 .icon_1,.icon_2 {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 @media screen and (max-width:800px){
     h1 {
-        font-size: 30px;
+        font-size: 1.5rem;
     }
     .wrapper {
         grid-template-columns: 45px auto;
