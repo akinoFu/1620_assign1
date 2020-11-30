@@ -39,6 +39,7 @@ body {
 .sidebar {
     padding: 10px;
 }
+
 .content {
     background-color: #e6e8e8;
     height: 100%;
@@ -47,11 +48,15 @@ body {
     grid-template-rows: 7.5% 85% 7.5%;
     /* padding: 10px; <- the gap between row 2 and 3 is invisible when it is enable*/ 
 }
+
 .note_menu {
     grid-column: span 2;
     display: flex;
     align-items: center;
     padding: 0 0 0 10px;
+}
+.lbl_message {
+    color: #808080;
 }
 .note_text {
     margin: 10px;
@@ -90,7 +95,7 @@ button {
 .btn_new, .btn_save {
     background-color: #5d987c;
 }
-.btn_dark {
+.btn_theme {
     background-color: #696969;
 }
 .btn_cancel {
@@ -108,7 +113,12 @@ button {
     height: 24px;
 }
 
-@media screen and (max-width:800px){
+li:hover, button:hover{
+    background-color: #ed8d8d !important;
+    cursor: pointer !important;
+}
+
+/* @media screen and (max-width:800px){
     h1 {
         font-size: 1.5rem;
     }
@@ -124,4 +134,4 @@ button {
         list-style-type: '_____ ';
         padding-left: 3px;
     }
-}
+} */
