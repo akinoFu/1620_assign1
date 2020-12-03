@@ -25,6 +25,9 @@ body {
     text-align: center;
     background-color: #967e7e;
     padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
@@ -39,7 +42,6 @@ body {
 .sidebar {
     padding: 10px;
 }
-
 .content {
     background-color: #e6e8e8;
     height: 100%;
@@ -48,12 +50,18 @@ body {
     grid-template-rows: 7.5% 85% 7.5%;
     /* padding: 10px; <- the gap between row 2 and 3 is invisible when it is enable*/ 
 }
-
-.note_menu {
+.disp_mode {
     grid-column: span 2;
     display: flex;
     align-items: center;
     padding: 0 0 0 10px;
+}
+.menu_title {
+    display: flex;
+}
+.close {
+    margin-left: auto;
+    visibility: hidden;
 }
 .lbl_message {
     color: #808080;
@@ -112,26 +120,60 @@ button {
     width: 24px;
     height: 24px;
 }
+.menu_img {
+    width: 16px;
+    height: 16px;
+    margin-right: auto;
+    visibility: hidden;
+}
+h1 {
+    margin-right: auto;
+}
 
-li:hover, button:hover{
+ul { 
+    padding: 0; 
+    list-style: none; 
+}
+li { 
+    padding: 3px 10px;
+    width: 90%; 
+    margin: 2px 0px;
+    text-align: left;
+    font-size: 0.7rem;
+}
+
+li:hover, button:hover, .menu_img:hover, .close:hover {
     background-color: #ed8d8d !important;
     cursor: pointer !important;
 }
 
-/* @media screen and (max-width:800px){
-    h1 {
-        font-size: 1.5rem;
-    }
+@media screen and (max-width:430px){
     .wrapper {
-        grid-template-columns: 45px auto;
-        grid-template-rows: 50px auto 55px;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px auto 50px;
     }
     .sidebar {
-        padding: 3px;
+        display: none;
+    }
+    .menu_img {
+        visibility: visible;
+    }
+
+    .mobileMenu {
+        margin: 30px;
+    }
+    .menu_title {
+        font-size: 1rem;
+    }
+    .close {
+        visibility: visible;
+        font-weight: bold;
     }
     ul {
-        list-style-position: inside;
-        list-style-type: '_____ ';
-        padding-left: 3px;
+        margin: 10px 0;
     }
-} */
+    li {
+        padding: 15px 0;
+    }
+
+}
