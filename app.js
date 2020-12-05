@@ -140,13 +140,13 @@ function saveNote() {
             // add a new note
             const index = notesArray.findIndex(({title}) => title === noteTitle)
             if (index == -1) {
-                // if the title is unique
+                // if the title does not exist in the array
                 notesArray.push({title: noteTitle, body: noteBody})
                 showMessage(true)
                 dispNoteLists()
                 editingTitle = noteTitle
             } else {
-                // if the same title exists 
+                // if the same title exists
                 const overwrite = window.confirm(`The title "${noteTitle}" exists. Do you with to overwrite?`)
                 if (overwrite) {
                     updateNote(noteTitle, noteBody, noteTitle)
@@ -352,7 +352,7 @@ function showObjects(flgVisible) {
 
 /*
     Function    : showMessage(flgShow)
-    Decctiption : Switch the display of save message on the label
+    Decctiption : Switch the display of a save message on the label
     Argument    : Boolean
     Return      : None
 */

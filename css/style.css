@@ -51,7 +51,6 @@ body {
     /* padding: 10px; <- the gap between row 2 and 3 is invisible when it is enable*/ 
 }
 .disp_mode {
-    grid-column: span 2;
     display: flex;
     align-items: center;
     padding: 0 0 0 10px;
@@ -65,8 +64,10 @@ body {
 }
 .lbl_message {
     color: #808080;
+    margin-left: auto;
 }
 .note_text {
+    grid-column-start: 1;
     margin: 10px;
 }
 .note_save {
@@ -129,7 +130,6 @@ button {
 h1 {
     margin-right: auto;
 }
-
 ul { 
     padding: 0; 
     list-style: none; 
@@ -141,7 +141,6 @@ li {
     text-align: left;
     font-size: 0.7rem;
 }
-
 li:hover, button:hover, .menu_img:hover, .close:hover {
     background-color: #ed8d8d !important;
     cursor: pointer !important;
@@ -158,7 +157,6 @@ li:hover, button:hover, .menu_img:hover, .close:hover {
     .menu_img {
         visibility: visible;
     }
-
     .mobileMenu {
         margin: 30px;
     }
@@ -175,5 +173,4 @@ li:hover, button:hover, .menu_img:hover, .close:hover {
     li {
         padding: 15px 0;
     }
-
 }
